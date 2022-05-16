@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="label">COUNTER</div>
+        <div class="print">00</div>
+        <div class="buttons">
+            <button id="btn1" onclick="resetBtn()">RESET</button>
+            <button id="btn2" onclick="removeBtn()">REMOVE</button>
+            <button id="btn3" onclick="addBtn()">ADD</button>
+        </div>
+    </main>
+<script>
+    let numValue = document.getElementsByClassName("print")[0];
+    function resetBtn(){
+        numValue.innerHTML = reset();
+    }
+    function removeBtn(){
+        numValue.innerHTML = decrease();
+    }
+    function addBtn(){
+        numValue.innerHTML =  increase();
+    }
+    //i have to make a function which will reset the value of add and remove value into o
+    let resetValue = 0;
+     function increase(){
+         if(1<2){
+             resetValue++;
+         }
+         return(resetValue);
+     }
+    // console.log('increase function '+increase());//working
+    function decrease(){
+        if(1<2){
+            resetValue--;
+         }
+    return(resetValue)
+    }
+    // console.log('decrease function = '+ decrease());
+    function reset(){
+        resetValue = 0;
+        return(resetValue)
+    }
+    // console.log(reset());
+</script>
+</body>
+</html>
